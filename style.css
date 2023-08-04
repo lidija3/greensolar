@@ -1,0 +1,712 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #191d21;
+  scroll-behavior: smooth;
+}
+
+main.fixed-position {
+  position: fixed;
+}
+main .home {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/modernHouse.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .home nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+main .home nav a img {
+  width: 150px;
+  mix-blend-mode: multiply;
+  filter: contrast(1);
+  position: left;
+}
+main .home nav .nav-menu {
+  display: none;
+}
+main .home nav .btnContact {
+  display: none;
+}
+main .home nav .hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1;
+}
+main .home nav .hamburger .bar {
+  background-color: #191d21;
+  width: 30px;
+  padding: 2px;
+  margin: 3px;
+  transition: 0.3s;
+}
+main .home nav .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+main .home nav .hamburger.active .bar:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+main .home nav .hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+main .home .mobile-nav .mobile-nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  gap: 0;
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: #E5E6E1;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  transition: 0.3s;
+}
+main .home .mobile-nav .mobile-nav-menu.active {
+  left: 0;
+}
+main .home .mobile-nav .mobile-nav-menu .mobile-nav-item {
+  list-style-type: none;
+  margin: 16px 0;
+  padding: 10px;
+}
+main .home .mobile-nav .mobile-nav-menu .mobile-nav-item .mobile-nav-link {
+  text-decoration: none;
+  color: #191d21;
+}
+main .home .landingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+  padding: 20px;
+}
+main .home .landingContainer .homeTitle1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+main .home .landingContainer .homeTitle2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+main .home .landingContainer .btnLearnMore {
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 1px solid #191d21;
+  background-color: transparent;
+  cursor: pointer;
+}
+main .home .landingContainer .btnLearnMore:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+main .home .btnScrollToTop {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+main .home .btnScrollToTop:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+main .aboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F2EF;
+}
+main .aboutUs article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+main .aboutUs article .aboutText {
+  width: 100%;
+  padding: 7%;
+}
+main .aboutUs article .aboutText .aboutTitle {
+  font-size: 50px;
+  color: #191d21;
+}
+main .aboutUs article .aboutText p {
+  margin-top: 15px;
+  line-height: 25px;
+}
+main .aboutUs article .aboutText .green {
+  color: #117865;
+  font-weight: bold;
+}
+main .aboutUs article img {
+  width: 100%;
+  height: 100%;
+}
+main .benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E5E6E1;
+  padding: 7%;
+}
+main .benefits .benefitsTitle {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+main .benefits .benefitsContainer article {
+  height: auto;
+  margin: 25px 0;
+  display: flex;
+}
+main .benefits .benefitsContainer article img {
+  background-color: #117865;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
+  margin-right: 15px;
+}
+main .benefits .benefitsContainer article div h4 {
+  margin-bottom: 5px;
+  color: #117865;
+}
+main .benefits .benefitsContainer article div p {
+  line-height: 25px;
+}
+main .solutions {
+  background-color: #E5E6E1;
+}
+main .solutions .solutionsTitle {
+  padding: 30px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+main .solutions .solutionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+main .solutions .solutionsContainer article {
+  width: 100%;
+  height: auto;
+}
+main .solutions .solutionsContainer article h4 {
+  padding-top: 10px;
+  text-align: center;
+  color: #117865;
+}
+main .solutions .solutionsContainer article p {
+  line-height: 25px;
+  padding: 3% 7%;
+}
+main .solutions .solutionsContainer article img {
+  width: 100%;
+  height: 300px;
+  margin: 15px 0;
+}
+main .solarPanels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #E5E6E1;
+}
+main .solarPanels article {
+  width: 100%;
+}
+main .solarPanels article h4 {
+  font-size: 40px;
+  text-align: center;
+  margin: 25px 0 40px;
+  padding: 0 7%;
+}
+main .solarPanels article p {
+  line-height: 25px;
+  margin-top: 15px;
+  padding: 0 7%;
+}
+main .solarPanels article .btnContact2 {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #117865;
+  color: white;
+  cursor: pointer;
+  margin: 5% 7%;
+}
+main .solarPanels article .btnContact2:hover {
+  background-color: rgba(17, 120, 102, 0.85);
+}
+main .solarPanels img {
+  width: 100%;
+  height: 300px;
+}
+main .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E6E1;
+  overflow: hidden;
+}
+main .contact .contactMap {
+  height: 100%;
+  width: 35%;
+  display: none;
+}
+main .contact .contactRightSide {
+  width: 100%;
+}
+main .contact .contactRightSide .contactTitle {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 20px;
+}
+main .contact .contactRightSide .contactWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo {
+  margin-right: 50px;
+  text-align: center;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .locationInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .locationInfo .imgLocation {
+  background-color: transparent;
+  border: 3px solid #117865;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin-right: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .locationInfo a {
+  text-decoration: none;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .phoneInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .phoneInfo .imgPhone {
+  background-color: transparent;
+  border: 3px solid #117865;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin-right: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .phoneInfo a {
+  text-decoration: none;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .mailInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .mailInfo .imgMail {
+  background-color: transparent;
+  border: 3px solid #117865;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  margin-right: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .mailInfo a {
+  text-decoration: none;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .constactSocialMedia {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .constactSocialMedia a {
+  background-color: #117865;
+  text-align: center;
+  padding: 20px;
+  margin: 0 2px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .constactSocialMedia a i {
+  width: 40px;
+  height: 20px;
+}
+main .contact .contactRightSide .contactWrapper .contactInfo .constactSocialMedia a:hover {
+  background-color: rgba(17, 120, 102, 0.85);
+}
+main .contact .contactRightSide .contactWrapper .contactForm {
+  width: 100%;
+  padding: 7%;
+}
+main .contact .contactRightSide .contactWrapper .contactForm p {
+  line-height: 25px;
+  margin-top: 10px;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form input {
+  border-radius: 5px;
+  margin: 7px 0;
+  width: 250px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form input:hover {
+  background-color: rgb(245, 245, 245);
+}
+main .contact .contactRightSide .contactWrapper .contactForm form input:focus {
+  outline: none;
+  border: 2px solid #117865;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form textarea {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin: 7px 0;
+  font-size: 14px;
+  border: none;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form textarea:hover {
+  background-color: rgb(245, 245, 245);
+}
+main .contact .contactRightSide .contactWrapper .contactForm form textarea:focus {
+  outline: none;
+  border: 2px solid #117865;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form .btnFormSend {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #117865;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+main .contact .contactRightSide .contactWrapper .contactForm form .btnFormSend:hover {
+  background-color: rgba(17, 120, 102, 0.85);
+}
+main .contact .contactRightSide .small {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+main .contact .conformation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(231, 231, 231, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+}
+main .contact .conformation .conformationWrapper {
+  width: 90%;
+  height: 220px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 3px solid #117865;
+}
+main .contact .conformation .conformationWrapper img {
+  width: 80px;
+  margin-top: -60px;
+  background-color: #117865;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+main .contact .conformation .conformationWrapper h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+main .contact .conformation .conformationWrapper p {
+  padding: 15px;
+  text-align: center;
+}
+main .contact .conformation .conformationWrapper .btnConformation {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #117865;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+main .contact .conformation .conformationWrapper .btnConformation:hover {
+  background-color: rgba(17, 120, 102, 0.85);
+}
+main .contact .popup {
+  visibility: visible;
+}
+
+/* Za kompjutere */
+@media screen and (min-width: 811px) and (min-height: 500px) {
+  * {
+    scroll-behavior: smooth;
+  }
+  main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  main .home {
+    scroll-snap-align: start;
+  }
+  main .home nav {
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  main .home nav .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .home nav .nav-menu .nav-item {
+    list-style-type: none;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  main .home nav .nav-menu .nav-item:hover {
+    background-color: rgba(128, 128, 128, 0.15);
+  }
+  main .home nav .nav-menu .nav-item .nav-link {
+    text-decoration: none;
+    color: #191d21;
+  }
+  main .home nav .btnContact {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #117865;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  main .home nav .btnContact:hover {
+    background-color: rgba(17, 120, 102, 0.85);
+  }
+  main .home nav .hamburger {
+    display: none;
+  }
+  main .home nav .hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+  }
+  main .home .landingContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-top: 3%;
+    padding: 20px;
+  }
+  main .home .landingContainer .homeTitle2 {
+    text-align: start;
+  }
+  main .aboutUs {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+  main .aboutUs article {
+    flex-direction: row;
+  }
+  main .aboutUs article .aboutText {
+    width: 50%;
+  }
+  main .aboutUs article img {
+    width: 50%;
+    height: 100vh;
+  }
+  main .benefits {
+    height: 100vh;
+    scroll-snap-align: start;
+    align-items: flex-end;
+    background-image: url("./images/hand.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+  }
+  main .benefits .benefitsTitle {
+    margin-right: 160px;
+  }
+  main .benefits .benefitsContainer {
+    margin-right: 10%;
+  }
+  main .benefits .benefitsContainer article {
+    width: 600px;
+  }
+  main .solutions {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+  main .solutions .solutionsTitle {
+    padding: 30px 0;
+    margin: 0 100px 20px;
+    border-bottom: 2px solid #191d21;
+    width: auto;
+  }
+  main .solutions .solutionsContainer {
+    flex-direction: row;
+  }
+  main .solutions .solutionsContainer article {
+    width: 500px;
+    height: 420px;
+    margin: 0 10px;
+  }
+  main .solutions .solutionsContainer article p {
+    padding: 15px;
+  }
+  main .solutions .solutionsContainer img {
+    height: 100%;
+    margin: 0;
+  }
+  main .solarPanels {
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-direction: row;
+  }
+  main .solarPanels article {
+    width: 40%;
+    padding: 4%;
+  }
+  main .solarPanels article h4 {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+  }
+  main .solarPanels article p {
+    padding: 0;
+  }
+  main .solarPanels article .btnContact2 {
+    margin: 15px 0;
+  }
+  main .solarPanels img {
+    width: 60%;
+    height: 100vh;
+  }
+  main .contact {
+    height: 100vh;
+    scroll-snap-align: start;
+    flex-direction: row;
+    background-color: #E5E6E1;
+  }
+  main .contact .contactMap {
+    display: block;
+  }
+  main .contact .contactRightSide {
+    height: 100%;
+    width: 65%;
+  }
+  main .contact .contactRightSide .contactWrapper {
+    margin: 30px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  main .contact .contactRightSide .contactWrapper .contactInfo .constactSocialMedia {
+    margin-top: 40px;
+  }
+  main .contact .contactRightSide .contactWrapper .contactForm {
+    width: 400px;
+    padding: 0;
+  }
+  main .contact .contactRightSide .contactWrapper .contactForm p {
+    margin-top: 0;
+  }
+  main .contact .contactRightSide .contactWrapper .contactForm form {
+    width: 400px;
+  }
+  main .contact .contactRightSide .small {
+    margin-top: 70px;
+  }
+  main .contact .conformation {
+    height: 100%;
+  }
+  main .contact .conformation .conformationWrapper {
+    width: 450px;
+    height: 250px;
+  }
+  main .contact .conformation .conformationWrapper img {
+    margin-top: -70px;
+  }
+  main .contact .conformation .conformationWrapper h2 {
+    margin-top: 30px;
+  }
+  main .contact .conformation .conformationWrapper .btnConformation {
+    padding: 12px 50px;
+    margin-top: 30px;
+    width: 250px;
+  }
+}
+/* Za landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  main .home nav {
+    padding: 2%;
+  }
+  main .home .mobile-nav .mobile-nav-menu {
+    padding-top: 80px;
+  }
+  main .home .landingContainer {
+    margin-top: 0;
+  }
+  main .home .landingContainer.inactive {
+    visibility: hidden;
+  }
+  main .contact .conformation {
+    position: absolute;
+    bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
