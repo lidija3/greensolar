@@ -12,4 +12,4 @@ Greensolar is an example website for solar company. It that provides information
 
 ## Preview
 
-![greensolar-preview](https://github.com/lidija3/greensolar/assets/122623282/3edb2d83-52c0-4c9c-b025-a43720207cd4)
+![greensolar-preview](https://github.com/lidija3/greensolar/assets/122623282/ff3cf68e-df66-49ae-ae67-bc8fd38ec1fe)
