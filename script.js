@@ -61,7 +61,3 @@ mobileNavLink.forEach(item => item.addEventListener('click', () => {
     mobileNavMenu.classList.remove('active');
     landingContainer.classList.remove('inactive');
 }))
-
-btnScrollToTop.addEventListener('click', () => {
-    window.location = "#home";
-})

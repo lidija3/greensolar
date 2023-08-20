@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
   color: #191d21;
   scroll-behavior: smooth;
+  overflow: visible;
 }
 
 main.fixed-position {
@@ -109,23 +110,6 @@ main .home .landingContainer .btnLearnMore {
 }
 main .home .landingContainer .btnLearnMore:hover {
   background-color: rgba(255, 255, 255, 0.15);
-}
-main .home .btnScrollToTop {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-main .home .btnScrollToTop:hover {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 main .aboutUs {
   display: flex;
@@ -488,6 +472,7 @@ main .contact .popup {
 @media screen and (min-width: 811px) and (min-height: 500px) {
   * {
     scroll-behavior: smooth;
+    overflow: hidden;
   }
   main {
     scroll-snap-type: y mandatory;
@@ -587,6 +572,9 @@ main .contact .popup {
   }
   main .benefits .benefitsContainer article {
     width: 600px;
+  }
+  main .benefits .benefitsContainer article img {
+    width: 75px;
   }
   main .solutions {
     height: 100vh;
